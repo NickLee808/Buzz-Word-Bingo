@@ -5,15 +5,19 @@ console.log('sometext', __dirname);
 const express = require('express');
 const router = express.Router();
 var app = express();
+let buzzwords = {
+  'buzzwords': [],
+};
 
-let 
+app.get('/', (req, res) =>
+  res.sendFile(__dirname + '/index.html'));
 
-app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/index.html');
-});
+app.get('/buzzwords', (req, res) =>
+  res.json(buzzwords));
 
-app.get('/buzzwords', function (req, res) {
-  res.send();
+app.post('/buzzword', (req, res) => {
+
+  res.send('asdf');
 });
 
 var server = app.listen(3000, () => {
