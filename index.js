@@ -1,13 +1,16 @@
 // jshint esversion:6
 
-console.log('sometext', __dirname);
+console.log('Directory name:', __dirname);
 
 const express = require('express');
 const router = express.Router();
 var app = express();
 let buzzwords = {
   'buzzwords': [],
+  'success': false,
 };
+
+app.use(bodyParser.json());
 
 app.get('/', (req, res) =>
   res.sendFile(__dirname + '/index.html'));
@@ -17,6 +20,7 @@ app.get('/buzzwords', (req, res) =>
 
 app.post('/buzzword', (req, res) => {
 
+  console.log(buzzwords);
   res.send('asdf');
 });
 
