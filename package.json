@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/NickLee808/Buzz-Word-Bingo/issues"
   },
-  "homepage": "https://github.com/NickLee808/Buzz-Word-Bingo#readme"
+  "homepage": "https://github.com/NickLee808/Buzz-Word-Bingo#readme",
+  "devDependencies": {
+    "body-parser": "^1.15.2"
+  }
 }
